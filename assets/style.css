@@ -1,0 +1,220 @@
+@import url('./global.css');
+
+/*Header Menu*/
+header .menu {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    padding: 5px;
+    justify-content: space-around;
+    background: #161616;
+    color: #fff;
+    position: fixed;
+}
+
+.title p {
+    font-size: 2rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu .menu__list {
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+/*menu itens*/
+.list__item a {
+    width: 200px;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-default);
+    font-size: 20px;
+    color: #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.list__item a:hover {
+    color: #3dcfb6;
+    transition: color .2s;
+
+}
+
+/*social medias*/
+
+.social__medias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 10%;
+    gap: 1rem;
+
+}
+
+.line {
+    width: 1px;
+    height: 300px;
+    background-color: #fff;
+    transform: rotate(2);
+}
+
+.medias__item {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+}
+
+.discord {
+    background: url('./img/discordia.png') no-repeat center;
+    background-size: cover;
+    filter: invert(100);
+}
+
+.github {
+    background: url('./img/github.png') no-repeat center;
+    background-size: cover;
+    filter: invert(100);
+}
+
+.instagram {
+    background: url('./img/instagram.png') no-repeat center;
+    background-size: cover;
+    filter: invert(100);
+}
+
+.tiktok {
+    background: url('./img/tiktok.png') no-repeat center;
+    background-size: cover;
+    filter: invert(100);
+}
+
+/*Elementos do inicio*/
+.main__inicio {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background: url('./img/background.webp');
+
+}
+
+.inicio {
+    width: 70%;
+}
+
+.title2 {
+    width: 100%;
+    height: 17rem;
+    color: #fff;
+
+    font-size: 8rem;
+    font-family: var(--font-default);
+}
+
+.title2 h2 {
+    color: #3dcfb6;
+}
+
+.title2 h1 {
+    margin: 0 0 0 10rem;
+}
+
+.text h2 {
+    height: 17rem;
+    color: #ffff;
+
+    font-family: var(--font-default);
+    font-size: 3rem;
+    margin-top: 5rem;
+}
+
+.arrow {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    background: url('./img/arrow.webp') no-repeat center;
+    background-size: cover;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.arrow a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+}
+
+
+/* seção - Sobre mim*/
+
+.about__me {
+    width: 80%;
+    padding: 1rem;
+    margin-top: 400px;
+    position: absolute;
+    left: 10%;
+    gap: 1rem;
+    display: flex;
+}
+
+.my__photo {
+    width: 500px;
+    height: 700px;
+    background: url('./img/foto.jpg')no-repeat center;
+    background-size: cover;
+    border-radius: 1rem;
+}
+
+.about__text {
+    width: 100%;
+    color: #fff;
+    gap: 100px;
+
+
+}
+
+.about__text h1 {
+    font-size: 4rem;
+    font-family: var(--font-default);
+    margin-right: 15%;
+}
+
+.about__text p {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin-top: 85px;
+}
+
+.skills {
+    justify-content: center;
+}
+
+/*responsividade*/
+
+@media (max-width: 1810px) {
+    .social__medias {
+        left: 7%;
+    }
+}
