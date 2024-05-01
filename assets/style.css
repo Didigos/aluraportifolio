@@ -1,32 +1,21 @@
 @import url('./global.css');
 
 /*Header Menu*/
-header .menu {
+header {
     display: flex;
-    width: 100%;
-    height: 10vh;
-    padding: 5px;
-    justify-content: space-around;
-    background: #161616;
+    justify-content: space-evenly;
+}
+header h1 {
     color: #fff;
-    position: fixed;
+    font-size: 1.5rem;
+    font-family: var(--font-default);
 }
-
-.title p {
-    font-size: 2rem;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.menu .menu__list {
+/*Copor */
+.menu__list {
     padding: 2px;
     display: flex;
     align-items: center;
+    justify-content: end;
 }
 
 /*menu itens*/
@@ -64,7 +53,7 @@ header .menu {
 
 .line {
     width: 1px;
-    height: 300px;
+    height: 100px;
     background-color: #fff;
     transform: rotate(2);
 }
@@ -108,72 +97,22 @@ header .menu {
     align-items: center;
     background-size: cover;
     background: url('./img/background.webp');
-
-}
-
-.inicio {
-    width: 70%;
-}
-
-.title2 {
-    width: 100%;
-    height: 17rem;
-    color: #fff;
-
-    font-size: 8rem;
-    font-family: var(--font-default);
-}
-
-.title2 h2 {
-    color: #3dcfb6;
-}
-
-.title2 h1 {
-    margin: 0 0 0 10rem;
 }
 
 .text h2 {
-    height: 17rem;
     color: #ffff;
-
     font-family: var(--font-default);
     font-size: 3rem;
-    margin-top: 5rem;
 }
 
-.arrow {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    background: url('./img/arrow.webp') no-repeat center;
-    background-size: cover;
-}
-
-.arrow:hover {
-    cursor: pointer;
-}
-
-.arrow a {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    z-index: 1;
-}
 
 
 /* seção - Sobre mim*/
 
 .about__me {
-    width: 80%;
-    padding: 1rem;
-    margin-top: 400px;
+
+    margin: 2% 0 0 0;
     position: absolute;
-    left: 10%;
     gap: 1rem;
     display: flex;
 }
@@ -190,8 +129,6 @@ header .menu {
     width: 100%;
     color: #fff;
     gap: 100px;
-
-
 }
 
 .about__text h1 {
@@ -213,8 +150,133 @@ header .menu {
 
 /*responsividade*/
 
-@media (max-width: 1810px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    header h1 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-family: var(--font-default);
+        display: none;
+    }
+
     .social__medias {
-        left: 7%;
+        left: 3%;
+    }
+
+    .main__inicio {
+        height: 50vh;
+        padding: 0;
+    }
+
+    .text h2 {
+        font-size: 2rem;
+    }
+
+    .about__text p {
+        margin-top: 0px;
+    }
+
+    .my__photo {
+        display: none;
     }
 }
+
+/* @media only screen and (max-width: 767px) {
+    header {
+        border: 1px solid #fff;
+        height: 10vh;
+        position: fixed;
+        background-color: #161616;
+    }
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        margin: 10px 0 0 0;
+        color: #fff;
+        font-family: var(--font-default);
+    }
+
+    .menu__list {
+        width: 100vw;
+        padding: 2px;
+        display: flex;
+        justify-content: space-around;
+        margin: 3rem 0 0 0;
+        left: 1px;
+        top: 5rem;
+
+    }
+
+    .text {
+        width: 44vh;
+        position: absolute;
+        left: 0;
+        top: 18rem;
+    }
+    .text h2 {
+        font-size: 2rem;
+        height: min-content;
+        text-align: center;
+        margin: 0;
+        border: 1px solid red;
+    }
+    .list__item a {
+        width: max-content;
+        height: 90%;
+        font-family: var(--font-default);
+        font-size: 20px;
+        color: #fff;
+        border-radius: 1rem;
+        text-decoration: none;
+    }
+
+    .list__item a:hover {
+        color: #3dcfb6;
+    }
+    
+    .social__medias {
+        display: none;
+    }
+    .main__inicio {
+        padding: 0;
+    }
+
+    .inicio {
+        margin-top: 10rem;
+    }
+
+    .title2 h1 {
+        font-size: 3rem;
+        height: min-content;
+    }
+    .title2 h2 {
+        color: #3dcfb6;
+        font-size: 3rem;
+    }
+    .title2 {
+        width: 100%;
+        height: 5rem;
+        color: #fff;
+        font-size: 7rem;
+        font-family: var(--font-default);
+    }
+    .about__me {
+        width: 100vw;
+        padding: 0;
+        margin-top: 20vh;
+        position: absolute;
+        left: 0%;
+        gap: .5rem;
+        display: flex;
+    }
+
+    .arrow {
+        display: none;
+    }
+    .about__text p {
+        font-size: 1.4rem;
+        padding: 3px;
+        font-family: Arial, sans-serif;
+        text-align: justify;
+        margin-top: 1px;
+    }
+} */
