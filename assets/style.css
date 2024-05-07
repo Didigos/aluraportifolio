@@ -2,8 +2,8 @@
 
 /*Header Menu*/
 header {
-    display: flex;
     height: 5vh;
+    display: flex;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -15,7 +15,20 @@ header h1 {
     font-family: var(--font-default);
 }
 
-/*Copor */
+.title2 h2 {
+    color: orange;
+    font-size: 3rem;
+    margin: -2% 0px 0px 108px;
+    font-family: var(--font-default);
+}
+
+.title2 h1 {
+    color: #ffff;
+    font-size: 4.5rem;
+    font-family: var(--font-default);
+}
+
+/*Copo */
 .menu__list {
     padding: 2px;
     display: flex;
@@ -68,28 +81,36 @@ header h1 {
     background: url('./img/background.webp');
 }
 
+.text {
+    margin: 10% 0 0 0;
+}
+
 .text h2 {
     color: #ffff;
     font-family: var(--font-default);
     font-size: 2rem;
 }
+
 /* icones das redes sociais*/
 
 ul {
     list-style: none;
-  }
-  
-  .example-2 {
+}
+
+.example-2 {
     display: flex;
-    margin: 10% 0 0 0;
+    margin: 7% 0 0 0;
     justify-content: center;
     align-items: center;
-  }
-  .example-2 .icon-content {
+
+}
+
+.example-2 .icon-content {
     margin: 0 10px;
     position: relative;
-  }
-  .example-2 .icon-content .tooltip {
+}
+
+.example-2 .icon-content .tooltip {
     position: absolute;
     top: -30px;
     left: 50%;
@@ -101,13 +122,16 @@ ul {
     visibility: hidden;
     font-size: 14px;
     transition: all 0.3s ease;
-  }
-  .example-2 .icon-content:hover .tooltip {
+
+}
+
+.example-2 .icon-content:hover .tooltip {
     opacity: 1;
     visibility: visible;
     top: -50px;
-  }
-  .example-2 .icon-content a {
+}
+
+.example-2 .icon-content a {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -119,20 +143,25 @@ ul {
     color: #4d4d4d;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover {
+    z-index: 0;
+}
+
+.example-2 .icon-content a:hover {
     box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
-  }
-  .example-2 .icon-content a svg {
+}
+
+.example-2 .icon-content a svg {
     position: relative;
     z-index: 1;
     width: 30px;
     height: 30px;
-  }
-  .example-2 .icon-content a:hover {
+}
+
+.example-2 .icon-content a:hover {
     color: white;
-  }
-  .example-2 .icon-content a .filled {
+}
+
+.example-2 .icon-content a .filled {
     position: absolute;
     top: auto;
     bottom: 0;
@@ -141,35 +170,122 @@ ul {
     height: 0;
     background-color: #000;
     transition: all 0.3s ease-in-out;
-  }
-  .example-2 .icon-content a:hover .filled {
-    height: 100%;
-  }
-  
-  .example-2 .icon-content a[data-social="linkedin"] .filled,
-  .example-2 .icon-content a[data-social="linkedin"] ~ .tooltip {
-    background-color: #0274b3;
-  }
-  
-  .example-2 .icon-content a[data-social="github"] .filled,
-  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
-    background-color: #24262a;
-  }
-  .example-2 .icon-content a[data-social="instagram"] .filled,
-  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5b51db,
-      #b33ab4,
-      #c135b4,
-      #e1306c,
-      #fd1f1f
-    );
-  }
-  .example-2 .icon-content a[data-social="youtube"] .filled,
-  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
-    background-color: #ff0000;
-  }
-  
+}
 
+.example-2 .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.example-2 .icon-content a[data-social="linkedin"] .filled,
+.example-2 .icon-content a[data-social="linkedin"]~.tooltip {
+    background-color: #0274b3;
+}
+
+.example-2 .icon-content a[data-social="github"] .filled,
+.example-2 .icon-content a[data-social="github"]~.tooltip {
+    background-color: #24262a;
+}
+
+.example-2 .icon-content a[data-social="instagram"] .filled,
+.example-2 .icon-content a[data-social="instagram"]~.tooltip {
+    background: linear-gradient(45deg,
+            #405de6,
+            #5b51db,
+            #b33ab4,
+            #c135b4,
+            #e1306c,
+            #fd1f1f);
+}
+
+.example-2 .icon-content a[data-social="youtube"] .filled,
+.example-2 .icon-content a[data-social="youtube"]~.tooltip {
+    background-color: #ff0000;
+}
+
+
+@media only screen and (max-width: 768px) {
+    header {
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        position: fixed;
+        background: orange;
+        z-index: 2;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+        color: #000;
+        font-family: var(--font-default);
+        font-weight: 700;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        background: #000000bb;
+        display: none;
+    }
+
+    .menu__list {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        gap: 10rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+
+    }
+
+    .menu__list a {
+        z-index: 3;
+        color: #fff;
+        font-family: var(--font-default);
+        font-size: 2rem;
+    }
+
+    .menu__list h1 {
+        color: rgb(181, 104, 243);
+        font-weight: 700;
+        font-family: var(--font-default);
+        font-size: 1.7rem;
+    }
+
+
+    .menu__list a:hover {
+        background: rgb(181, 104, 243);
+        color: white;
+        padding: 5px;
+    }
+    /*elementos abaixo do header, titulo e texto*/
+    .title2 h1{
+        font-size: 2.5rem;
+    }
+    .title2 h2 {
+        font-size: 2.1rem;
+        margin: 1px 0 0 100px;
+    }
+    .text h2{
+        font-size: 1.2rem;
+    }
+
+    .example-2 {
+        margin: 20% 0 0 0;
+    }
+}
+
+/*ANOTAÇÕES PARA NÃO ESQUECER
+
+----- ADICIONAR O EFEITO DE BLUR QUANDO O MENU ESTIVER HABILITADO 
+    .main__inicio {
+        filter: blur(5px);
+    }
+-------------------------------------------------------------------
+
+
+
+
+*/
