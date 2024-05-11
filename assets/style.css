@@ -15,7 +15,7 @@ header h1 {
 }
 
 .title2 h2 {
-    color: orange;
+    color: var(--secondary-color);
     font-size: 3rem;
     margin: -2% 0px 0px 108px;
     font-family: var(--font-default);
@@ -50,7 +50,7 @@ header h1 {
 }
 
 .list__item a:hover {
-    color: orange;
+    color: var(--secondary-color);
     transition: color .2s;
 
 }
@@ -253,7 +253,7 @@ ul {
 .line__item {
     width: 50px;
     height: 1px;
-    background: orange;
+    background: var(--secondary-color);
 }
 
 .content__text {
@@ -272,26 +272,33 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
 
+}
+.main__skills hr{
+    width: 100%;
+    height: 1px;
+    border: none;
+    background: var(--secondary-color);
+}
 .skills__list {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-evenly;
+
 }
 
 .skill__item {
-    width: 200px;
-    height: 200px;
-    border: 1px solid white;
-
+    width: 150px;
+    height: 150px;
+    background: #212121;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
+    border-radius: 1rem 0 0 0;
     gap: 1rem;
+
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 .skill__item img {
@@ -309,7 +316,10 @@ ul {
     text-align: center;
 }
 
-/*------------------------------------------------------------------------------------------*/
+/*seção de projetos*/
+
+
+
 /*--------------------------------RESPONSIVIDADE-------------------------------------*/
 
 @media only screen and (max-width: 768px) {
@@ -318,7 +328,7 @@ ul {
         position: absolute;
         top: 0;
         position: fixed;
-        background: orange;
+        background: var(--secondary-color);
         z-index: 2;
         display: flex;
         flex-direction: row-reverse;
@@ -406,6 +416,7 @@ ul {
     .skills__list {
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .skill__item {
