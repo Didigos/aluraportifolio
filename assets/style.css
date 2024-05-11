@@ -164,6 +164,7 @@ ul {
 
 .example-2 .icon-content a:hover {
     color: white;
+
 }
 
 .example-2 .icon-content a .filled {
@@ -308,12 +309,55 @@ ul {
 .skill__html-css {
     display: flex;
     width: 80%;
+
 }
 
 .skills__title h2 {
     color: #fff;
     font-size: 2.5rem;
     text-align: center;
+    margin: 3rem 0 0 0;
+}
+
+/*formações*/
+
+.main__formations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.formation__item{
+    width: 500px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.formation__item:hover {
+    cursor: pointer;
+    /* background: rgba(255, 255, 255, 0.048); */
+    background-color: #8257e621;
+    border-radius: 1rem;
+    filter: blur(1);
+    transition: .5s background;
+}
+.item__title {
+
+    color: white;
+    font-size: 1.2rem;
+}
+
+.item__text {
+    width: 70%;
+    color: #fff;
+}
+.item__text h2 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
 }
 
 /*seção de projetos*/
@@ -424,7 +468,19 @@ ul {
         height: 100px;
     }
 
+    .main__formations {
+        flex-direction: column;
+        gap: none;
+    }
 
+    .formation__item {
+        gap: .5rem;
+        height: 200px;
+    }
+
+    .item__text {
+        width: 60%;
+    }
 }
 
 
