@@ -15,9 +15,8 @@
             <ul class="menu__list">
                 <h1>Bem vindo ao meu portifolio =D</h1>
                 <li class="list__item"><a href="#inicio">Inicio</a></li>
-                <li class="list__item"><a href="#texto_sobre">Sobre Mim</a></li>
-                <li class="list__item"><a href="#">Projetos</a></li>
-                <li class="list__item"><a href="#">Contato</a></li>
+                <li class="list__item"><a href="#secao1">Sobre Mim</a></li>
+                <li class="list__item"><a href="#secao3">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -108,7 +107,7 @@
                     </div>
                 </div>
             </div>
-            <div class="main__skills">
+            <div class="main__skills" id="secao1">
                 <div class="skills__title">
                     <h2>Skills</h2>
                 </div>
@@ -145,7 +144,7 @@
                             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
                     </li>
                 </ul>
-                <div class="skills__title">
+                <div  class="skills__title">
                     <h2>Formações & Experiência</h2>
                     <hr>
                 </div>
@@ -191,12 +190,12 @@
                     <!-- Experiencia profisisonal -->
                     <li class="formation__item">
                         <div class="item__title">
-                            <h3>2019-2023</h3>
+                            <h3>2023-2024</h3>
                             <img src="./assets/img/handshake.png" alt="icone de formação">
                         </div>
                         <div class="item__text">
-                            <h2>Experiência Profissional</h2><br>
-                            <p>Faculdade Multivix campus - Vitória/ES. Ensino superior do curso de Administração.
+                            <h2>Free-Lancer</h2><br>
+                            <p>Empresa: SNT-Resources, Instalação/atendimento e suporte aos clientes que adquirirem os produtos da loja. javascript .Lua HTML CSS, GitHub.
                                 <hr>
                             </p>
                         </div>
@@ -207,20 +206,19 @@
                             <img src="./assets/img/handshake.png" alt="icone de formação">
                         </div>
                         <div class="item__text">
-                            <h2>Experiência Profissional</h2><br>
-                            <p>Curso realizado pela plataforma DIO (Digital Inovation One), em que aborda desde o básico do Javascript até 
-                                o avançado, com projetos práticos. <hr>
+                            <h2>Free-Lancer</h2><br>
+                            <p>Empresa: FIVEM BRASIL, Suporte dev junior, Desenvolvimento/instação e/ou correção de bugs em .Lua,html,css e javascript; <hr>
                             </p>
                         </div>
                     </li>
                     <li class="formation__item">
                         <div class="item__title">
-                            <h3>2019-2023</h3>
+                            <h3>2024-2024</h3>
                             <img src="./assets/img/handshake.png" alt="icone de formação">
                         </div>
-                        <div class="item__text">
-                            <h2>Experiência Profissional</h2><br>
-                            <p>Curso realizado pela plataforma DIO (Digital Inovation One) posterior a formações como Data Science Specialist, Html e Css developer, 
+                        <div class="item__text" id="secao3">
+                            <h2>Free-Lancer</h2><br>
+                            <p>Empresa: CODEFORGE, Desenvolvimento e manutenção de sistemas para plataforma CFX e em API discord para websites e discord Bots. Javascript, TypeScript, CSS, HTML, MySql, Node Js;
                                 <hr>
                             </p>
                         </div>
@@ -229,7 +227,32 @@
                 </ul>
             </div>
         </section>
+        <section id="main__formulario">
+            <form id="formulario" method="post">
+                <h1>Entre em contato</h1>
+                <fieldset class="formulario__campo">
+                    <label for="">Nome Completo</label>
+                    <input type="text" name=""nome required>
+                    <span class="formulario__campo__aviso"></span>
+                </fieldset>
+                <fieldset class="formulario__campo">
+                    <label for="">Email</label>
+                    <input type="email" name=""email required>
+                    <span class="formulario__campo__aviso"></span>
+                </fieldset>
+                <fieldset class="formulario__campo" required>
+                    <label for="">Mensagem</label>
+                    <!-- <input id="mensagem" type="text"> -->
+                    <textarea id="mensagem" name="mensagem"></textarea>
+                    <span class="formulario__campo__aviso"></span>
+                </fieldset>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
     </main>
+    <script src="./app/main.js"></script>
 </body>
 
 </html>
